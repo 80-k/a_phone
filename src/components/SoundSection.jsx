@@ -1,13 +1,18 @@
 
 const SoundSection = () => {
     const handleLearnMore = () => {
-        const ele = document.querySelector('.display-section')
-        console.log(ele, ele?.getBoundingClientRect().top)
-        window.scrollTo({
-            top: ele?.getBoundingClientRect().top,
-            left:0,
-            behavior:'smooth'
-        })
+        const ele = document.querySelector('.display-section.wrapper')
+        if (ele) {
+            const elementTop = ele.getBoundingClientRect().top
+            const offsetTop = elementTop + window.scrollY
+            console.log(elementTop, window.scrollY)
+            
+            window.scrollTo({
+                top: offsetTop,
+                left: 0,
+                behavior: 'smooth'
+            })
+        }
     }
 
     return (

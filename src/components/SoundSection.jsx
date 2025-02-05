@@ -5,7 +5,6 @@ const SoundSection = () => {
         if (ele) {
             const elementTop = ele.getBoundingClientRect().top
             const offsetTop = elementTop + window.scrollY
-            console.log(elementTop, window.scrollY)
             
             window.scrollTo({
                 top: offsetTop,
